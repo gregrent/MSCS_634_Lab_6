@@ -17,12 +17,15 @@ The purpose of this lab is to explore transactional retail data and identify pat
 **1. Data Cleaning**
 - Some transactions were canceled, and there were missing product descriptions.
 - **Decision:** Removed canceled orders and rows with missing descriptions to ensure accurate analysis.
+
 **2. Transaction Format Conversion**
 - Apriori and FP-Growth require a one-hot encoded transaction matrix.
 - **Decision:** Used TransactionEncoder to convert the dataset into the required format.
+
 **3. Support Threshold Selection**
 - Low support thresholds increase computation time and memory usage.
 - **Decision:** Tested different thresholds and selected a minimum support of 0.02 to balance result significance and efficiency.
+
 **4. Algorithm Choice**
 - Apriori generates candidate sets and can be slow for large datasets.
 - **Decision:** Compared Apriori with FP-Growth and observed that FP-Growth is faster and more scalable for large datasets.
